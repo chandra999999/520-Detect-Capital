@@ -1,0 +1,19 @@
+class Solution {
+public:
+int nofocap(string g){
+    int c=0;
+    for(int i=0;i<g.size();i++){
+        if(g[i]>=65&&g[i]<=90)
+        c++;
+    }
+    return c;
+}
+    bool detectCapitalUse(string word) {
+        int p=nofocap(word);
+        if(p==word.size()||p==0)
+        return true;
+        else if(p==1&&word[0]>=65&&word[0]<=90)
+        return true;
+        return false;
+    }
+};
